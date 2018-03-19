@@ -1,0 +1,5 @@
+{
+  "name": "one-bin",
+  "version": "1.0.0",
+  "bin": "./one-bin"
+}
