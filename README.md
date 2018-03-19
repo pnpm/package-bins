@@ -1,21 +1,21 @@
-# @pnpm/pkg-bins
+# @pnpm/package-bins
 
 > Returns bins of a package
 
 <!--@shields('npm', 'travis')-->
-[![npm version](https://img.shields.io/npm/v/@pnpm/pkg-bins.svg)](https://www.npmjs.com/package/@pnpm/pkg-bins) [![Build Status](https://img.shields.io/travis/pnpm/pkg-bins/master.svg)](https://travis-ci.org/pnpm/pkg-bins)
+[![npm version](https://img.shields.io/npm/v/@pnpm/package-bins.svg)](https://www.npmjs.com/package/@pnpm/package-bins) [![Build Status](https://img.shields.io/travis/pnpm/package-bins/master.svg)](https://travis-ci.org/pnpm/package-bins)
 <!--/@-->
 
 ## Installation
 
 ```sh
-npm i -S @pnpm/pkg-bins
+npm i -S @pnpm/package-bins
 ```
 
 ## Usage
 
 ```ts
-import getBinsFromPkg from '@pnpm/pkg-bins'
+import getBinsFromPkg from '@pnpm/package-bins'
 
 await pkgBinsFromPkg(path.resolve('package.json'), process.cwd())
 //> [{name: 'bin-name', path: 'path-to-bin'}]

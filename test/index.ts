@@ -1,4 +1,4 @@
-import getBinsFromPkg from '@pnpm/pkg-bins'
+import getBinsFromPkg from '@pnpm/package-bins'
 import test = require('tape')
 import path = require('path')
 

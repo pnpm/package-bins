@@ -1,5 +1,5 @@
 dependencies:
-  '@pnpm/pkg-bins': 'link:../__package_previews__/pkg-bins/@pnpm/pkg-bins'
+  '@pnpm/package-bins': 'link:../__package_previews__/pkg-bins/@pnpm/package-bins'
   '@pnpm/types': 1.7.0
   '@types/mz': 0.0.32
   mz: 2.7.0

@@ -1,5 +1,5 @@
 {
-  "name": "@pnpm/pkg-bins",
+  "name": "@pnpm/package-bins",
   "version": "0.0.0",
   "description": "Returns bins of a package",
   "main": "lib/index.js",
@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pnpm/pkg-bins.git"
+    "url": "git+https://github.com/pnpm/package-bins.git"
   },
   "keywords": [
     "pnpm",
@@ -29,9 +29,9 @@
   "author": "Zoltan Kochan <z@kochan.io> (https://www.kochan.io/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pnpm/pkg-bins/issues"
+    "url": "https://github.com/pnpm/package-bins/issues"
   },
-  "homepage": "https://github.com/pnpm/pkg-bins#readme",
+  "homepage": "https://github.com/pnpm/package-bins#readme",
   "dependencies": {
     "@pnpm/types": "^1.7.0",
     "@types/mz": "^0.0.32",
