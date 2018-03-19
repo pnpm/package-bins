@@ -17,7 +17,7 @@ npm i -S @pnpm/package-bins
 ```ts
 import getBinsFromPkg from '@pnpm/package-bins'
 
-await pkgBinsFromPkg(path.resolve('package.json'), process.cwd())
+await getBinsFromPkg(path.resolve('package.json'), process.cwd())
 //> [{name: 'bin-name', path: 'path-to-bin'}]
 ```
 
