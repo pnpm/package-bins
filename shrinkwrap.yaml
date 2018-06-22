@@ -1,9 +1,11 @@
 dependencies:
+  '@pnpm/package-bins': 'link:../__package_previews__/package-bins/@pnpm/package-bins'
   '@pnpm/types': 1.7.0
   '@types/mz': 0.0.32
   mz: 2.7.0
   p-filter: 1.0.0
 devDependencies:
+  '@types/node': 10.3.4
   '@types/tape': 4.2.32
   mos: 2.0.0-alpha.3
   mos-plugin-readme: 1.0.4
@@ -2992,6 +2994,7 @@ shrinkwrapVersion: 3
 specifiers:
   '@pnpm/types': ^1.7.0
   '@types/mz': ^0.0.32
+  '@types/node': ^10.3.4
   '@types/tape': ^4.2.31
   mos: ^2.0.0-alpha.3
   mos-plugin-readme: ^1.0.4
