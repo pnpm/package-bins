@@ -8,12 +8,13 @@
     "lib"
   ],
   "engines": {
-    "node": ">=4"
+    "node": ">=6"
   },
   "scripts": {
     "lint": "tslint -c tslint.json --project .",
     "tsc": "rimraf lib && tsc",
-    "test": "npm run lint && preview && ts-node test --type-check && mos t",
+    "test": "npm run lint && preview && ts-node test --type-check",
+    "test-md": "mos t",
     "md": "mos",
     "prepublishOnly": "npm run tsc",
     "fix": "tslint -c tslint.json --project . --fix"

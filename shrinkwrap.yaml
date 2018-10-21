@@ -1,4 +1,5 @@
 dependencies:
+  '@pnpm/package-bins': 'link:../__package_previews__/package-bins/@pnpm/package-bins'
   '@pnpm/types': 2.0.0
   '@types/mz': 0.0.32
   mz: 2.7.0
