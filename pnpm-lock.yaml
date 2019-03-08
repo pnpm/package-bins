@@ -14,6 +14,7 @@ devDependencies:
   ts-node: 7.0.1
   tslint: 5.13.1
   typescript: 3.3.3333
+lockfileVersion: 5
 packages:
   /@pnpm/exec/1.1.5:
     dependencies:
@@ -3017,9 +3018,6 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha1-5a2ryKz0CPY4X8dklWhMiOavaJo=
-registry: 'https://registry.npmjs.org/'
-shrinkwrapMinorVersion: 9
-shrinkwrapVersion: 3
 specifiers:
   '@pnpm/types': ^3.0.0
   '@types/mz': ^0.0.32
