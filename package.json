@@ -34,7 +34,7 @@
   },
   "homepage": "https://github.com/pnpm/package-bins#readme",
   "dependencies": {
-    "@pnpm/types": "^2.0.0",
+    "@pnpm/types": "^3.0.0",
     "@types/mz": "^0.0.32",
     "mz": "^2.7.0",
     "p-filter": "^1.0.0"
