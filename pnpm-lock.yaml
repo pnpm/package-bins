@@ -1,9 +1,9 @@
 dependencies:
   '@pnpm/types': 3.0.0
-  '@types/mz': 0.0.32
   mz: 2.7.0
   p-filter: 2.0.0
 devDependencies:
+  '@types/mz': 0.0.32
   '@types/node': 10.14.1
   '@types/tape': 4.2.33
   mos: 2.0.0-alpha.3
@@ -59,9 +59,11 @@ packages:
   /@types/mz/0.0.32:
     dependencies:
       '@types/node': 10.14.1
+    dev: true
     resolution:
       integrity: sha512-cy3yebKhrHuOcrJGkfwNHhpTXQLgmXSv1BX+4p32j+VUQ6aP2eJ5cL7OvGcAQx75fCTFaAIIAKewvqL+iwSd4g==
   /@types/node/10.14.1:
+    dev: true
     resolution:
       integrity: sha512-Rymt08vh1GaW4vYB6QP61/5m/CFLGnFZP++bJpWbiNxceNa6RBipDmb413jvtSf/R1gg5a/jQVl2jY4XVRscEA==
   /@types/tape/4.2.33:
