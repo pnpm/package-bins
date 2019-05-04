@@ -1,4 +1,4 @@
-import {PackageBin, PackageJson} from '@pnpm/types'
+import { DependencyManifest, PackageBin } from '@pnpm/types'
 import fs = require('mz/fs')
 import pFilter = require('p-filter')
 import path = require('path')
@@ -8,12 +8,12 @@ export interface Command {
   path: string,
 }
 
-export default async function binify (pkg: PackageJson, pkgPath: string): Promise<Command[]> {
-  if (pkg.bin) {
-    return commandsFromBin(pkg.bin, pkg.name, pkgPath)
+export default async function binify (manifest: DependencyManifest, pkgPath: string): Promise<Command[]> {
+  if (manifest.bin) {
+    return commandsFromBin(manifest.bin, manifest.name, pkgPath)
   }
-  if (pkg.directories && pkg.directories.bin) {
-    const binDir = path.join(pkgPath, pkg.directories.bin)
+  if (manifest.directories && manifest.directories.bin) {
+    const binDir = path.join(pkgPath, manifest.directories.bin)
     const files = await findFiles(binDir)
     return pFilter(
       files.map((file) => ({
