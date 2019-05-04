@@ -1,7 +1,11 @@
 import { DependencyManifest, PackageBin } from '@pnpm/types'
-import fs = require('mz/fs')
+import { readdir, stat } from 'graceful-fs'
 import pFilter = require('p-filter')
 import path = require('path')
+import { promisify } from 'util'
+
+const readdirP = promisify(readdir)
+const statP = promisify(stat)
 
 export interface Command {
   name: string,
@@ -20,7 +24,7 @@ export default async function binify (manifest: DependencyManifest, pkgPath: str
         name: file,
         path: path.join(binDir, file),
       })),
-      async (cmd: Command) => (await fs.stat(cmd.path)).isFile(),
+      async (cmd: Command) => (await statP(cmd.path)).isFile(),
     )
   }
   return []
@@ -28,7 +32,7 @@ export default async function binify (manifest: DependencyManifest, pkgPath: str
 
 async function findFiles (dir: string): Promise<string[]> {
   try {
-    return await fs.readdir(dir)
+    return await readdirP(dir)
   } catch (err) {
     if ((err as NodeJS.ErrnoException).code !== 'ENOENT') {
       throw err
