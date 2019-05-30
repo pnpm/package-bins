@@ -45,7 +45,7 @@ function commandsFromBin (bin: PackageBin, pkgName: string, pkgPath: string) {
   if (typeof bin === 'string') {
     return [
       {
-        name: pkgName,
+        name: pkgName.startsWith('@') ? pkgName.substr(pkgName.indexOf('/') + 1) : pkgName,
         path: path.join(pkgPath, bin),
       },
     ]
