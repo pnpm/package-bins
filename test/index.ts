@@ -31,3 +31,25 @@ test('get bin of scoped package', async (t) => {
   )
   t.end()
 })
+
+test("skip dangerous bin names", async (t) => {
+  t.deepEqual(
+    await getBinsFromPkg({
+      name: 'foo',
+      version: '1.0.0',
+      bin: {
+        'good': './good',
+        '../bad': './bad',
+        '~/bad': './bad',
+        '..\\bad': './bad',
+      },
+    }, process.cwd()),
+    [
+      {
+        name: 'good',
+        path: path.resolve('good'),
+      },
+    ]
+  )
+  t.end()
+})
