@@ -35,7 +35,8 @@
   "homepage": "https://github.com/pnpm/package-bins#readme",
   "dependencies": {
     "@pnpm/types": "^4.0.0",
-    "graceful-fs": "^4.1.15",
+    "graceful-fs": "^4.2.3",
+    "is-subdir": "^1.1.1",
     "p-filter": "^2.1.0"
   },
   "devDependencies": {

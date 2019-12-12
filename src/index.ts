@@ -1,5 +1,6 @@
 import { DependencyManifest, PackageBin } from '@pnpm/types'
 import { readdir, stat } from 'graceful-fs'
+import isSubdir = require('is-subdir')
 import pFilter = require('p-filter')
 import path = require('path')
 import { promisify } from 'util'
@@ -56,4 +57,5 @@ function commandsFromBin (bin: PackageBin, pkgName: string, pkgPath: string) {
       name: commandName,
       path: path.join(pkgPath, bin[commandName]),
     }))
+    .filter((cmd) => isSubdir(pkgPath, cmd.path))
 }
