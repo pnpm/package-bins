@@ -1,3 +1,5 @@
+> Moved to the [pnpm monorepo](https://github.com/pnpm/pnpm)
+
 # @pnpm/package-bins
 
 > Returns bins of a package
